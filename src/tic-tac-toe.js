@@ -5,9 +5,9 @@ class TicTacToe {
       this.winner = null
   }
 
-    getCurrentPlayerSymbol() {
-
-    }
+  getCurrentPlayerSymbol() {
+    return this.currentSymbol
+  }
 
     nextTurn(rowIndex, columnIndex) {
 
