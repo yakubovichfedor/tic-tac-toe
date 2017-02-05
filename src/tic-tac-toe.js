@@ -61,9 +61,10 @@ class TicTacToe {
     return this.winner
   }
 
-    noMoreTurns() {
+  noMoreTurns() {
+    return Object.keys(this.field).length == 9
+  }
 
-    }
 
     isDraw() {
 
