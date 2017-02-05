@@ -65,10 +65,9 @@ class TicTacToe {
     return Object.keys(this.field).length == 9
   }
 
-
-    isDraw() {
-
-    }
+  isDraw() {
+    return (this.getWinner() == null) && this.noMoreTurns() ? true : false
+  }
 
     getFieldValue(rowIndex, colIndex) {
 
