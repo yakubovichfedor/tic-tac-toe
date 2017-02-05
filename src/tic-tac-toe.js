@@ -69,9 +69,9 @@ class TicTacToe {
     return (this.getWinner() == null) && this.noMoreTurns() ? true : false
   }
 
-    getFieldValue(rowIndex, colIndex) {
-
-    }
+  getFieldValue(rowIndex, colIndex) {
+    return this.field[`${rowIndex}${colIndex}`] ? this.field[`${rowIndex}${colIndex}`] : null
+  }
 }
 
 module.exports = TicTacToe;
