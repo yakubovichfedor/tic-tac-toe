@@ -1,7 +1,9 @@
 class TicTacToe {
-    constructor() {
-
-    }
+  constructor() {
+      this.currentSymbol = 'x'
+      this.field = {}
+      this.winner = null
+  }
 
     getCurrentPlayerSymbol() {
 
