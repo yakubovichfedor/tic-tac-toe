@@ -56,9 +56,10 @@ class TicTacToe {
     return false
   }
 
-    getWinner() {
-
-    }
+  getWinner() {
+    this.isFinished()
+    return this.winner
+  }
 
     noMoreTurns() {
 
