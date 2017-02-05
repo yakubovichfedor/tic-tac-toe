@@ -19,9 +19,42 @@ class TicTacToe {
     }
   }
 
-    isFinished() {
+  isFinished() {
+    let sumD = "",
+        sumT = ""
+    for (let i = 0; i < 3; i++) {
+      let sumX = "",
+          sumY = ""
+      for (let j = 0; j < 3; j++) {
+        sumX += this.field[`${i}${j}`]
+        sumY += this.field[`${j}${i}`]
 
+        if (i == j) {
+          sumD += this.field[`${i}${j}`]
+        }
+        if ((i + j) == 2) {
+          sumT += this.field[`${i}${j}`]
+        }
+      }
+
+      let x = 'xxx'
+      let o = 'ooo'
+      if (x == sumX || x == sumY || x == sumT || x == sumD) {
+        this.winner = 'x'
+        return true
+      }
+      if (o == sumX || o == sumY || o == sumT || o == sumD) {
+        this.winner = 'o'
+        return true
+      }
     }
+
+    if (Object.keys(this.field).length == 9) {
+      return true
+    }
+
+    return false
+  }
 
     getWinner() {
 
